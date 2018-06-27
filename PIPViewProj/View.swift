@@ -8,29 +8,14 @@
 
 import UIKit
 
-class View: UIView, Draggable {
-     var panSelector: Selector
-     var tapSelector: Selector
-     var originalFrame : CGRect
+class View: DragView {
 
      override init(frame: CGRect) {
-          originalFrame = UIScreen.main.bounds
-          panSelector = #selector(panDetect(_:))
-          tapSelector = #selector(tapDetect(_:))
           super.init(frame: frame)
-          enableGestures()
           self.backgroundColor = UIColor.blue
      }
 
      required init?(coder aDecoder: NSCoder) {
           fatalError("init(coder:) has not been implemented")
-     }
-
-     @objc func panDetect(_ panRecognizer: UIPanGestureRecognizer) {
-          detectPan(panRecognizer)
-     }
-
-     @objc func tapDetect(_ tapRecognizer: UITapGestureRecognizer) {
-          detectTap(tapRecognizer)
      }
 }

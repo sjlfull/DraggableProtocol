@@ -15,7 +15,7 @@
 		61B609CE20E159E70019B17A /* PIPViewProjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B609CD20E159E70019B17A /* PIPViewProjTests.swift */; };
 		61B609D920E159E70019B17A /* PIPViewProjUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B609D820E159E70019B17A /* PIPViewProjUITests.swift */; };
 		61B609E720E16EF20019B17A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B609E620E16EF20019B17A /* View.swift */; };
-		61B609E920E1A4A80019B17A /* PIPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B609E820E1A4A80019B17A /* PIPProtocol.swift */; };
+		61B609E920E1A4A80019B17A /* DragClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B609E820E1A4A80019B17A /* DragClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		61B609D820E159E70019B17A /* PIPViewProjUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPViewProjUITests.swift; sourceTree = "<group>"; };
 		61B609DA20E159E70019B17A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61B609E620E16EF20019B17A /* View.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		61B609E820E1A4A80019B17A /* PIPProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPProtocol.swift; sourceTree = "<group>"; };
+		61B609E820E1A4A80019B17A /* DragClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 			children = (
 				61B609B820E159E50019B17A /* AppDelegate.swift */,
 				61B609E620E16EF20019B17A /* View.swift */,
-				61B609E820E1A4A80019B17A /* PIPProtocol.swift */,
+				61B609E820E1A4A80019B17A /* DragClass.swift */,
 				61B609BA20E159E50019B17A /* ViewController.swift */,
 				61B609BC20E159E50019B17A /* Main.storyboard */,
 				61B609BF20E159E70019B17A /* Assets.xcassets */,
@@ -265,7 +265,7 @@
 				61B609BB20E159E50019B17A /* ViewController.swift in Sources */,
 				61B609B920E159E50019B17A /* AppDelegate.swift in Sources */,
 				61B609E720E16EF20019B17A /* View.swift in Sources */,
-				61B609E920E1A4A80019B17A /* PIPProtocol.swift in Sources */,
+				61B609E920E1A4A80019B17A /* DragClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
