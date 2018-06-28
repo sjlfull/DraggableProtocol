@@ -11,7 +11,7 @@ import UIKit
 class View: DragView {
 
      override init(frame: CGRect) {
-          super.init(frame: frame)
+          super.init(frame: CGRect(x: 0, y: 0, width: frame.height, height: frame.width))
           self.backgroundColor = UIColor.blue
      }
 

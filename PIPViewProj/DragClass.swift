@@ -33,27 +33,33 @@ class DragView: UIView {
     }
 
     @objc func detectPan(_ recognizer: UIPanGestureRecognizer) {
-        if self.frame.height == originalFrame.height {
-            if recognizer.translation(in: self).y >= 0 {
-                self.frame.origin.y = recognizer.translation(in: self).y
-            }
-            if recognizer.state == .ended {
-                if(self.frame.origin.y >= self.frame.height/6) {
-                    UIView.animate(withDuration: 0.3) {
-                        self.frame = CGRect(x: 0, y: self.frame.height/1.13, width: self.frame.width, height: self.frame.height/11)
-                    }
-                } else {
-                    UIView.animate(withDuration: 0.5) {
-                        self.frame.origin = CGPoint(x: 0, y: 0)
+            if self.frame.height == originalFrame.height || self.frame.height == originalFrame.width {
+                if recognizer.translation(in: self).y >= 0 {
+                    self.frame.origin.y = recognizer.translation(in: self).y
+                }
+                if recognizer.state == .ended {
+                    if(self.frame.origin.y >= self.frame.height/6) {
+                        UIView.animate(withDuration: 0.3) {
+                            self.frame = CGRect(x: 0, y: self.frame.height/1.13, width: self.frame.width, height: self.frame.height/11)
+                        }
+                    } else {
+                        UIView.animate(withDuration: 0.5) {
+                            self.frame.origin = CGPoint(x: 0, y: 0)
+                        }
                     }
                 }
             }
-        }
     }
 
     @objc func detectTap (_ recognizer: UITapGestureRecognizer) {
-        UIView.animate(withDuration: 0.5) {
-            self.frame = self.originalFrame
+        if UIDeviceOrientationIsPortrait(UIDevice.current.orientation) {
+            UIView.animate(withDuration: 0.5) {
+                self.frame = self.originalFrame
+            }
+        } else {
+            UIView.animate(withDuration: 0.5) {
+                self.frame = CGRect(x: 0, y: 0, width: self.originalFrame.height, height: self.originalFrame.width)
+            }
         }
     }
 }

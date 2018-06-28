@@ -105,10 +105,10 @@
 			children = (
 				61B609B820E159E50019B17A /* AppDelegate.swift */,
 				61B609E620E16EF20019B17A /* View.swift */,
-				61B609E820E1A4A80019B17A /* DragClass.swift */,
 				61B609F020E4563B0019B17A /* PIPProtocol.swift */,
 				61B609BA20E159E50019B17A /* ViewController.swift */,
 				61B609BC20E159E50019B17A /* Main.storyboard */,
+				61B609E820E1A4A80019B17A /* DragClass.swift */,
 				61B609BF20E159E70019B17A /* Assets.xcassets */,
 				61B609C120E159E70019B17A /* LaunchScreen.storyboard */,
 				61B609C420E159E70019B17A /* Info.plist */,
