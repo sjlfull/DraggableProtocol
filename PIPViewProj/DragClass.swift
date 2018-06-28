@@ -16,7 +16,7 @@ class DragView: UIView {
     override init(frame: CGRect) {
         originalFrame = UIScreen.main.bounds
         panSelector = #selector(detectPan(_:))
-        tapSelector = #selector(detectTap(_:))
+        tapSelector = #selector(detectTap)
         super.init(frame: frame)
         enableGestures()
     }
@@ -32,12 +32,12 @@ class DragView: UIView {
         addGestureRecognizer(tapGestureRecognizer)
     }
 
-    @objc func detectPan(_ recognizer: UIPanGestureRecognizer) {
+    @objc func detectPan(_ panRecognizer: UIPanGestureRecognizer) {
             if self.frame.height == originalFrame.height || self.frame.height == originalFrame.width {
-                if recognizer.translation(in: self).y >= 0 {
-                    self.frame.origin.y = recognizer.translation(in: self).y
+                if panRecognizer.translation(in: self).y >= 0 {
+                    self.frame.origin.y = panRecognizer.translation(in: self).y
                 }
-                if recognizer.state == .ended {
+                if panRecognizer.state == .ended {
                     if(self.frame.origin.y >= self.frame.height/6) {
                         UIView.animate(withDuration: 0.3) {
                             self.frame = CGRect(x: 0, y: self.frame.height/1.13, width: self.frame.width, height: self.frame.height/11)
@@ -48,10 +48,10 @@ class DragView: UIView {
                         }
                     }
                 }
-            }
+        }
     }
 
-    @objc func detectTap (_ recognizer: UITapGestureRecognizer) {
+    @objc func detectTap() {
         if UIDeviceOrientationIsPortrait(UIDevice.current.orientation) {
             UIView.animate(withDuration: 0.5) {
                 self.frame = self.originalFrame
